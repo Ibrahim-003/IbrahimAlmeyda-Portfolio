@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* plugins */
+@plugin 'tailwind-scrollbar' {
+    nocompatible: true;
+    preferredStrategy: 'pseudoelements';
+}
+
+@theme {
+
+    /* Light Mode Color Palette */
+    --color-light-beige: #e4dbd0;
+    /* Page background */
+    --color-light-cream: #f4ede4;
+    /* Background header */
+    --color-dark-gray: #1A202C;
+    /* Text color */
+    --color-light-ivory: #f5f0e8;
+    /* Background hero text */
+    --color-gray-neutral: #525252;
+    /* Underline subtitle */
+    --color-purple-dark: #805ad5;
+    /* Background dark mode */
+    --color-purple-deep: #6b46c1;
+    /* Background dark mode hover */
+    --color-light-blue-gray: #9bafcb;
+    /* Border color menu button */
+    --color-light-grayish-blue: #edf2f7;
+    /* Background color menu button hover */
+    --color-white: #fff;
+    /* Background modal menu */
+    --color-teal-primary: #319795;
+    /* Background external links */
+    --color-teal-dark: #2c7a7b;
+    /* Background external links hover */
+
+
+    /* Dark Mode Color Palette */
+    --color-orange-soft: #fbd38d;
+    /* Background light mode */
+    --color-orange-warm: #f6ad55;
+    /* Background light mode hover */
+    --color-dark-charcoal: #202023;
+    /* Page background */
+    --color-white: #fff;
+    /* Text color */
+    --color-blue-gray-muted: #5a7fa3;
+    /* Background hero text */
+    --color-blue-marine: #2d3748;
+    /* Background menu modal */
+
+
+    /* FAMILY FONT */
+    --font-work-sans: "Outfit", sans-serif;
+
+    /* PRESENTATION FONT SIZES AND COLOR*/
+    --my-titile-size: clamp(14px, 5vw, 18px);
+    --my-name-size: clamp(28px, 6vw, 48px);
+    --color-greeting: #a98b66;
+    --color-job: #796751;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    html {
+        font-family: var(--font-work-sans);
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 600;
+    }
+
+    p,
+    span,
+    button,
+    a {
+        font-size: var(--text-base);
+    }
+
+    button {
+        cursor: pointer;
+        display: block;
+        outline: none;
+    }
+}
