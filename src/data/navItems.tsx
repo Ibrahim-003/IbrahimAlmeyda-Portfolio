@@ -15,4 +15,7 @@ export const navItems = [
     label: "Projects",
     link: "#projects",
   },
+  {label: "Contact",
+    link: "#contact",
+  }
 ];

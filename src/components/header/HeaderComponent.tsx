@@ -4,9 +4,7 @@ import Logo from "./Logo";
 import Actions from "./Actions";
 
 const HeaderComponent: React.FC = () => {
-    const [activeLink, setActiveLink] = useState<string>(
-      window.location.pathname
-    );
+    const [activeLink, setActiveLink] = useState<string>(window.location.pathname);
 
   return (
     <header className='fixed top-0 left-0 z-40 w-full backdrop-blur-xs'>

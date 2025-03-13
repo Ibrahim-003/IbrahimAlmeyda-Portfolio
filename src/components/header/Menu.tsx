@@ -10,7 +10,7 @@ interface MenuComponentProps {
 
 const MenuComponent: React.FC<MenuComponentProps> = ({handleActiveMenu, setActiveLink}) => {
   return (
-    <div className='absolute -bottom-[250px] right-4 w-1/2 max-w-[250px] py-4 rounded bg-white dark:bg-blue-marine'>
+    <div className='absolute -bottom-[285px] right-4 w-1/2 max-w-[250px] py-4 rounded bg-white dark:bg-blue-marine'>
       <nav className='flex flex-col'>
         {navItems.map(({ label, link }, key) => (
           <a
