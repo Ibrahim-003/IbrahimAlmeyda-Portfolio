@@ -13,7 +13,7 @@ const PresentationComponent: React.FC = () => {
         I'm a Frontend Developer.
       </h3>
       <img
-        src='./src/assets/images/profile-picture.webp'
+        src='/profile-picture.webp'
         width={120}
         height={120}
         className='mt-4 rounded-full'
