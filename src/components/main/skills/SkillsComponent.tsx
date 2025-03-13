@@ -3,8 +3,10 @@ import { SiTypescript, SiJavascript, SiTailwindcss } from "react-icons/si";
 
 const SkillsComponent: React.FC = () => {
   return (
-    <section className='py-26 flex flex-col justify-center' id='skills'>
-      <h2 className='font-bold text-xl underline'>Skills</h2>
+    <section className='pt-20 pb-8 flex flex-col justify-center' id='skills'>
+      <h2 className='font-bold text-xl underline decoration-2 underline-offset-4'>
+        Skills
+      </h2>
       <div className='mt-6 grid gap-4 sm:px-4 sm:grid-cols-2 md:gap-x-8'>
         <div className='w-full max-w-[324px] bg-light-ivory dark:bg-white/20 px-2 py-2 rounded-md flex items-center gap-3'>
           <FaHtml5 className='text-[#E34F26] text-2xl' />

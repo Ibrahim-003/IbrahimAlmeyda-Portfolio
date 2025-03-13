@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const ContactComponent: React.FC = () => {
   return (
-    <section id='contact' className="flex justify-center items-center">
+    <section id='contact' className="pt-10 flex justify-center items-center">
       <div className='flex gap-4'>
         <a
           href='https://github.com/Ibrahim-003'

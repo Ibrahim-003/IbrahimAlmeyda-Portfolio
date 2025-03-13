@@ -16,8 +16,10 @@ const Project = () => {
   } = useProjectFilter(projects);
 
   return (
-    <section className='py-26 flex flex-col justify-center gap-6' id='projects'>
-      <h2 className='font-bold text-xl underline mb-6'>Projects</h2>
+    <section className='pt-20 pb-8 flex flex-col justify-center gap-6' id='projects'>
+      <h2 className='font-bold text-xl mb-4 underline decoration-2 underline-offset-4'>
+        Projects
+      </h2>
       {loading && <p>Cargando...</p>}
       {error && <p>{error}</p>}
       {projects.length > 0 && (
@@ -31,9 +33,9 @@ const Project = () => {
           />
           <ProjectList reposMapped={filteredProjects} />
           <a
-            href="https://github.com/Ibrahim-003"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://github.com/Ibrahim-003?tab=repositories'
+            target='_blank'
+            rel='noopener noreferrer'
             className='w-max mx-auto bg-teal-primary mt-8 px-3 py-2 rounded-md flex items-center gap-3 hover:bg-teal-dark transition-colors duration-300 ease-in-out '
           >
             <span className='text-white dark:text-white/90'>

@@ -2,7 +2,7 @@ import { FaFileDownload } from "react-icons/fa";
 
 const PresentationComponent: React.FC = () => {
   return (
-    <section className='relative py-26 flex flex-col justify-center' id='home'>
+    <section className='relative pt-26 pb-8 flex flex-col justify-center' id='home'>
       <h2 className='text-(length:--my-name-size) text-greeting dark:text-white/50'>
         Hi, This is
       </h2>
