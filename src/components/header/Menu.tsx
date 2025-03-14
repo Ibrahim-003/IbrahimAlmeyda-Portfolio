@@ -1,14 +1,25 @@
 import Button from "../basic/Button";
 import Translate from "../../assets/translate.svg?react";
-
-import { navItems } from "../../data/navItems";
+import { useTranslation } from "react-i18next";
+import { useNavItems } from "../../hooks/useNavItems";
 
 interface MenuComponentProps {
   handleActiveMenu: () => void;
   setActiveLink: (link: string) => void;
 }
 
-const MenuComponent: React.FC<MenuComponentProps> = ({handleActiveMenu, setActiveLink}) => {
+const MenuComponent: React.FC<MenuComponentProps> = ({
+  handleActiveMenu,
+  setActiveLink,
+}) => {
+  const { t, i18n } = useTranslation();
+  const navItems = useNavItems();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "es" : "en";
+    i18n.changeLanguage(newLang);
+  };
+
   return (
     <div className='absolute -bottom-[285px] right-4 w-1/2 max-w-[250px] py-4 rounded bg-white dark:bg-blue-marine'>
       <nav className='flex flex-col'>
@@ -18,8 +29,8 @@ const MenuComponent: React.FC<MenuComponentProps> = ({handleActiveMenu, setActiv
             key={key}
             className='px-4 py-2 hover:underline hover:underline-offset-4 hover:bg-light-grayish-blue hover:dark:bg-white/20'
             onClick={() => {
-                handleActiveMenu();
-                setActiveLink(link)
+              handleActiveMenu();
+              setActiveLink(link);
             }}
           >
             {label}
@@ -27,9 +38,12 @@ const MenuComponent: React.FC<MenuComponentProps> = ({handleActiveMenu, setActiv
         ))}
       </nav>
       <div className='mt-5 flex justify-center items-center'>
-        <Button styles='border border-light-blue-gray  hover:bg-light-grayish-blue  dark:hover:bg-white/20 rounded-full px-4 py-1 flex gap-2'>
+        <Button
+          onClick={toggleLanguage}
+          styles='border border-light-blue-gray hover:bg-light-grayish-blue dark:hover:bg-white/20 rounded-full px-4 py-1 flex gap-2'
+        >
           <Translate />
-          <span>English</span>
+          <span>{t("language")}</span>
         </Button>
       </div>
     </div>

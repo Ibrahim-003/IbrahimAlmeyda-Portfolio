@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import { useState } from "react";
 import { useDarkTheme } from "../../hooks/useDarkTheme";
+import { useTranslation } from "react-i18next";
 
 import Menu from "../../assets/menu.svg?react";
 import DarkIcon from "../../assets/darkIcon.svg?react";
@@ -7,19 +8,25 @@ import LightIcon from "../../assets/lightIcon.svg?react";
 import Translate from "../../assets/translate.svg?react";
 
 import Button from "../basic/Button";
-import MenuComponent from './Menu';
+import MenuComponent from "./Menu";
 
 interface HeaderActionsProps {
   setActiveLink: (link: string) => void;
 }
 
-const HeaderActions: React.FC<HeaderActionsProps> = ({ setActiveLink}) => {
-    const { dark, setDark } = useDarkTheme();
-    const [isActiveMenu, setIsActiveMenu] = useState(false);
+const HeaderActions: React.FC<HeaderActionsProps> = ({ setActiveLink }) => {
+  const { dark, setDark } = useDarkTheme();
+  const [isActiveMenu, setIsActiveMenu] = useState(false);
+  const { t, i18n } = useTranslation();
 
-      const handleActiveMenu = () => {
-        setIsActiveMenu((prev) => !prev);
-      };
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "es" : "en";
+    i18n.changeLanguage(newLang);
+  };
+
+  const handleActiveMenu = () => {
+    setIsActiveMenu((prev) => !prev);
+  };
 
   return (
     <div className='flex gap-2 lg:gap-4'>
@@ -41,7 +48,7 @@ const HeaderActions: React.FC<HeaderActionsProps> = ({ setActiveLink}) => {
           )}
         </Button>
       </div>
-      <div className='flex items-center md:hidden'>
+      <div className='flex items-center lg:hidden'>
         <Button
           onClick={handleActiveMenu}
           styles={`w-10 h-10 border border-light-blue-gray dark:border-white/30 hover:bg-light-grayish-blue dark:hover:bg-white/10 rounded grid place-items-center`}
@@ -55,10 +62,13 @@ const HeaderActions: React.FC<HeaderActionsProps> = ({ setActiveLink}) => {
           />
         )}
       </div>
-      <div className='hidden md:flex items-center '>
-        <Button styles='border border-light-blue-gray  hover:bg-light-grayish-blue  dark:hover:bg-white/20 rounded-full px-4 py-1 flex gap-2'>
+      <div className='hidden lg:flex items-center '>
+        <Button
+          onClick={toggleLanguage}
+          styles='border border-light-blue-gray hover:bg-light-grayish-blue dark:hover:bg-white/20 rounded-full px-4 py-1 flex gap-2'
+        >
           <Translate />
-          <span>English</span>
+          <span>{t("language")}</span>
         </Button>
       </div>
     </div>

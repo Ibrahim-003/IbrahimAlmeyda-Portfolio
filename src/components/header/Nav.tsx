@@ -1,15 +1,20 @@
 import React from "react";
-import { navItems } from "../../data/navItems";
+import { useNavItems } from "../../data/navItems";
 
 interface NavComponentProps {
-    activeLink: string;
-    setActiveLink: (link: string) => void;
+  activeLink: string;
+  setActiveLink: (link: string) => void;
 }
 
-const NavComponent: React.FC<NavComponentProps> = ({activeLink, setActiveLink}) => {
+const NavComponent: React.FC<NavComponentProps> = ({
+  activeLink,
+  setActiveLink,
+}) => {
+  const navItems = useNavItems();
+
   return (
     <>
-      <nav className='hidden md:flex justify-between gap-2 bg-light-cream p-2 dark:bg-white/20 rounded-lg'>
+      <nav className='hidden lg:flex justify-between gap-2 bg-light-cream p-2 dark:bg-white/20 rounded-lg'>
         {navItems.map(({ label, link }, key) => (
           <a
             href={link}
