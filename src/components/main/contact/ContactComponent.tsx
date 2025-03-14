@@ -1,25 +1,17 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Form from "./Form";
+import SocialMedia from "./SocialMedia";
+import { useTranslation } from "react-i18next";
 
 const ContactComponent: React.FC = () => {
+    const {t} = useTranslation();
   return (
-    <section id='contact' className="pt-10 flex justify-center items-center">
-      <div className='flex gap-4'>
-        <a
-          href='https://github.com/Ibrahim-003'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-gray-600 dark:text-white/50 hover:text-teal-primary transition-colors duration-300'
-        >
-          <FaGithub size={32} />
-        </a>
-        <a
-          href='https://www.linkedin.com/in/ibrahim-almeyda/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-gray-600 dark:text-white/50 hover:text-teal-primary transition-colors duration-300'
-        >
-          <FaLinkedin size={32} />
-        </a>
+    <section id='contact' className='pt-20 flex justify-center flex-col gap-6'>
+      <h2 className='font-bold text-xl underline decoration-2 underline-offset-4'>
+        {t('contact.title')}
+      </h2>
+      <div className="flex flex-col items-center justify-between gap-8 md:flex-row-reverse md:items-start md:px-4">
+        <Form />
+        <SocialMedia />
       </div>
     </section>
   );

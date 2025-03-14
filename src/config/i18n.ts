@@ -39,6 +39,15 @@ const resources = {
         title: "Projects",
         viewAll: "View All Projects",
       },
+      contact: {
+        title: "Contact",
+        socialTitle: "My Social Networks",
+        formTitle: "Send Me a Message",
+        namePlaceholder: "Your Name",
+        emailPlaceholder: "example@gmail.com",
+        messagePlaceholder: "Your Message",
+        submit: "Submit",
+      },
       footer: {
         copyright: "© 2025 Ibrahim Almeyda. All Rights Reserved.",
       },
@@ -82,6 +91,15 @@ const resources = {
       projects: {
         title: "Proyectos",
         viewAll: "Ver Todos los Proyectos",
+      },
+      contact: {
+        title: "Contacto",
+        socialTitle: "Mis Redes Sociales",
+        formTitle: "Enviame un Mensaje",
+        namePlaceholder: "Tu Nombre",
+        emailPlaceholder: "ejemplo@gmail.com",
+        messagePlaceholder: "Tu Mensaje",
+        submit: "Enviar",
       },
       footer: {
         copyright: "© 2025 Ibrahim Almeyda. Todos los derechos reservados.",

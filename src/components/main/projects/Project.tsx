@@ -41,7 +41,7 @@ const Project = () => {
             href='https://github.com/Ibrahim-003?tab=repositories'
             target='_blank'
             rel='noopener noreferrer'
-            className='w-max mx-auto bg-teal-primary mt-8 px-3 py-2 rounded-md flex items-center gap-3 hover:bg-teal-dark transition-colors duration-300 ease-in-out '
+            className='w-max mx-auto bg-teal-primary mt-8 px-3 py-2 rounded-md flex items-center gap-3 hover:bg-teal-dark transition-colors duration-300 ease-in-out'
           >
             <span className='text-white dark:text-white/90'>
               {t('projects.viewAll')}
