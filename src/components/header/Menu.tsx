@@ -1,7 +1,7 @@
 import Button from "../basic/Button";
 import Translate from "../../assets/translate.svg?react";
-import { useTranslation } from "react-i18next";
 import { useNavItems } from "../../hooks/useNavItems";
+import { useChangeLanguage } from "../../hooks/useChangeLanguage";
 
 interface MenuComponentProps {
   handleActiveMenu: () => void;
@@ -12,13 +12,9 @@ const MenuComponent: React.FC<MenuComponentProps> = ({
   handleActiveMenu,
   setActiveLink,
 }) => {
-  const { t, i18n } = useTranslation();
+  const {t, toggleLanguage} = useChangeLanguage();
   const navItems = useNavItems();
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "es" : "en";
-    i18n.changeLanguage(newLang);
-  };
 
   return (
     <div className='absolute -bottom-[285px] right-4 w-1/2 max-w-[250px] py-4 rounded bg-white dark:bg-blue-marine'>

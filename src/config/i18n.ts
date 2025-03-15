@@ -65,7 +65,7 @@ const resources = {
         contact: "Contacto",
       },
       presentation: {
-        title1: "Hola, Yo Soy",
+        title1: "Hola, Soy",
         title2: "Ibrahim Almeyda",
         title3: "Desarrollador Frontend",
         downloadBtn: "Descargar CV",

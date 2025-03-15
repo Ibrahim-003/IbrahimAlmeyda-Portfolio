@@ -21,7 +21,7 @@ export const useProjects = () => {
         return;
       }
 
-      const response = await searchProjects("4", "update", "desc");
+      const response = await searchProjects("12", "created", "desc");
 
       if (!response.ok) throw new Error(handleApiError(response));
 
