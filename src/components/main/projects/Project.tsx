@@ -25,7 +25,7 @@ const Project = () => {
       <h2 className='font-bold text-xl mb-4 underline decoration-2 underline-offset-4'>
         {t('projects.title')}
       </h2>
-      {loading && <p>Cargando...</p>}
+      {loading && <p>{t('loading')}</p>}
       {error && <p>{error}</p>}
       {projects.length > 0 && (
         <>

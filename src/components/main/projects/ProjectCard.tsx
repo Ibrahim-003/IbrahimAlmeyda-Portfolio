@@ -12,7 +12,7 @@ const ProjectCard: React.FC<MappedRepo> = ({
 }) => {
 
   return (
-    <article className="w-full max-w-[350px] mx-auto py-4 bg-light-cream dark:bg-white/10 rounded-lg shadow-lg flex flex-col justify-between gap-5 sm:px-4 md:max-w-[400px]">
+    <article className="w-full max-w-[320px] mx-auto p-3 bg-light-cream dark:bg-white/10 rounded-lg shadow-md shadow-dark-charcoal/30 flex flex-col justify-between gap-5 md:p-4 md:max-w-[400px]">
       <ProjectCardHeader title={title} />
       <ProjectCardContent title={title} description={description} />
       <ProjectCardFooter tags={tags} githubRepoUrl={githubRepoUrl} demo={demo} />

@@ -30,7 +30,7 @@ const HeaderActions: React.FC<HeaderActionsProps> = ({ setActiveLink }) => {
           onClick={() => {
             setDark((prev) => !prev);
           }}
-          styles={`w-10 h-10 rounded grid place-items-center ${
+          styles={`w-10 h-10 rounded grid place-items-center transition-colors duration-300 ease-in-out ${
             dark
               ? "border bg-orange-soft hover:bg-orange-warm border-white/30"
               : "bg-purple-dark hover:bg-purple-deep border border-light-blue-gray"
@@ -60,7 +60,7 @@ const HeaderActions: React.FC<HeaderActionsProps> = ({ setActiveLink }) => {
       <div className='hidden lg:flex items-center '>
         <Button
           onClick={toggleLanguage}
-          styles='border border-light-blue-gray hover:bg-light-grayish-blue dark:hover:bg-white/20 rounded-full px-4 py-1 flex gap-2'
+          styles='border border-light-blue-gray hover:bg-light-grayish-blue transition-colors duration-300 ease-in-out dark:hover:bg-white/20 rounded-full px-4 py-1 flex gap-2'
         >
           <Translate />
           <span>{t("language")}</span>

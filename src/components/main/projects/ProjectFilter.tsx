@@ -51,7 +51,7 @@ const ProjectFilter: React.FC<ProjectFilterProps> = ({
         <FaBorderAll className='text-2xl text-teal-primary' />
       </button>
       <div className='h-1 w-full mt-3 rounded-full bg-teal-primary sm:mt-0'></div>
-      <div className='w-full py-3 px-1 flex items-center gap-4 overflow-x-auto sm:overflow-clip scrollbar-thin scrollbar-thumb-dark-charcoal/40 scrollbar-track-light-beige sm:px-0 dark:scrollbar-thumb-white/30 dark:scrollbar-track-dark-charcoal'>
+      <div className='w-full py-3 px-1 flex items-center gap-4 overflow-x-auto md:overflow-clip scrollbar-thin scrollbar-thumb-dark-charcoal/40 scrollbar-track-light-beige sm:px-0 dark:scrollbar-thumb-white/30 dark:scrollbar-track-dark-charcoal'>
         {arrayTech.map((tag) => (
           <button
             key={tag}
