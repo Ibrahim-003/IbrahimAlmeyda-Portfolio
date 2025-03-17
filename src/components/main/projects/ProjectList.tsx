@@ -8,7 +8,7 @@ interface ProjectListProps {
 const ProjectList:React.FC<ProjectListProps> = ({reposMapped}) => {
   return (
     <section className="md:px-4">
-      <div className="rounded grid grid-cols-1 md:grid-cols-2 gap-6 h-[920px] overflow-auto scrollbar-none sm:scrollbar-thin dark:sm:scrollbar-track-dark-charcoal dark:sm:scrollbar-thumb-white/30 md:pr-3">
+      <div className="rounded p-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-[900px] overflow-auto scrollbar-none sm:scrollbar-thin sm:scrollbar-track-light-beige dark:sm:scrollbar-track-dark-charcoal dark:sm:scrollbar-thumb-white/30 md:pr-3">
         {reposMapped?.map((repo) => (
             <ProjectCard
               key={repo.id}
