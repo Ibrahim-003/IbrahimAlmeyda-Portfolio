@@ -46,7 +46,7 @@ const Project = () => {
             <span className='text-white dark:text-white/90'>
               {t('projects.viewAll')}
             </span>
-            <FaExternalLinkSquareAlt className='text-white dark:text-white/80' />
+            <FaExternalLinkSquareAlt className='text-white' />
           </a>
         </>
       )}

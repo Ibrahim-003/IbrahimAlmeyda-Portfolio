@@ -33,7 +33,7 @@ const PresentationComponent: React.FC = () => {
         <span className='text-white dark:text-white/90'>
           {t("presentation.downloadBtn")}
         </span>
-        <FaFileDownload className='text-white animate-bounce dark:text-white/80' />
+        <FaFileDownload className='text-white animate-bounce' />
       </a>
     </section>
   );
